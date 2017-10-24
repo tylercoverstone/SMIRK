@@ -1,0 +1,109 @@
+from tastypie.resources import ModelResource
+from tastypie.authorization import Authorization
+from smirk.models import *
+
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your API endPoints here.
+
+#System Administrator Role
+class System_Administrator(ModelResource):
+    class Meta:
+	queryset = System_Administrator.objects.all()
+	resource_name = 'System_Administrator'
+	authorization = Authorization()
+
+#Doctor Role
+class Doctor(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Nurse Role
+class Nurse(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Medical Administrator Role
+class Medical_Administrator(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Insurance Administrator Role
+class Insurance_Administrator(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Patient Role
+class Patient(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Record
+class Record(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Doctor Exam Record
+class Doctor_Exam_Record(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Diagnosis Record
+class Diagnosis_Record(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Test Results Record
+class Test_Results_Record(ModelResource):
+   class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+
+#Insurance Claim Record
+class Insurance_Claim_Record(ModelResource):
+   class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+
+#Patient_Doctor_Correspondence_Record
+class Patient_Doctor_Correspondence_Record(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Raw Record
+class Raw_Record(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
+#Note
+class Note(ModelResource):
+    class Meta:
+	queryset = Doctor.objects.all()
+	resource_name = 'Doctor'
+	authorization = Authorization()
+
